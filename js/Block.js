@@ -1,19 +1,17 @@
-function Block(){
+function Block(w,h){
 
-	this.w = this.random(300,100);
-	this.h = this.random(180,100);
+	this.w = w || this.random(300,100);
+	this.h = h || this.random(180,100);
 
 	this.block = document.createElement('div');
 	this.block.classList.add('block')
-	console.log(this.block)
+
 	this.block.style.width = `${this.w}px`;
 	this.block.style.height = `${this.h}px`;
 
 
 
 	document.querySelector(".stage").appendChild(this.block);
-
-	
 
 
 }
