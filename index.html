@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>傻逼 八音符游戏</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		html , body{
+			width: 100%;
+			height: 100%;
+			background: #eee;
+		}
+		.stage{
+			width: 320px;
+			height: 280px;
+			background: #fff;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+		}
+		.role{
+			width: 38px;
+			height: 38px;
+			background: red;
+			position: absolute;
+			top: 50%;
+			margin-top: -38px;
+			left: 30px;
+		}
+		.block{
+/*			width: 320px;
+			height: 50%;*/
+			background: black;
+			position: absolute;
+			bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="stage">
+		<div class="role"></div>
+		<!-- <div class="blocks"></div> -->
+	</div>
+	<script type="text/javascript" src="./js/audioAPI.js"></script>
+	<script type="text/javascript" src="./js/Role.js"></script>
+	<script type="text/javascript" src="./js/Block.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
