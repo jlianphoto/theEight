@@ -3,8 +3,6 @@
 var analyser ;
 
 
-
-
 function Game(){
   this.timer = null;
 
@@ -33,17 +31,27 @@ Game.prototype.startGetVoiceSize = function() {
           let voiceSize = AudioAPI.getVoiceSize(analyser)
           this.voiceSize = voiceSize/1000;
 
-          if (this.voiceSize > 1) {
-            this.role.jump(this.voiceSize);
+          
+
+          if (this.voiceSize>0) {
+
+            if (this.voiceSize > 1) {
+              this.role.jump(this.voiceSize);
+            }
+            
+            this.role.move();
+            this.blocks.forEach(function(item){
+              item.move(this.voiceSize/100);
+            }.bind(this));
+
+          }else{
+            this.role.static();
           }
           
-          this.blocks.forEach(function(item){
-            item.move(this.voiceSize/100);
-          }.bind(this));
+          
 
           // die
-          if (this.blocks[0].deltaX > this.blocks[0].w+290 && this.blocks[1].deltaX < 252 && this.voiceSize<0.1) {
-            // console.log("你死了傻逼")
+          if (this.blocks[0].deltaX > this.blocks[0].w+290 && this.blocks[1].deltaX < 252 && !this.voiceSize) {
             this.role.jumpDown()
 
           }

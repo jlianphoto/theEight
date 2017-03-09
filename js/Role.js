@@ -1,7 +1,7 @@
 function Role(initHeight){
   this.frame = 0;
   this.h = initHeight;
-  this.role = document.querySelector('.role');
+  this.role = document.querySelector('span');
   
   this._setHeight(this.h);
 
@@ -27,9 +27,26 @@ Role.prototype.jumpDown = function() {
 
 	this._setHeight(this.h);
 
+	if (this.frame%2 == 0) {
+		this.role.className = "role3";
+	}else{
+		this.role.className = "role4";
+	}
+
 };
 
+Role.prototype.move = function(){
+	this.frame ++;
+	if (this.frame%2 == 0) {
+		this.role.className = "role1";
+	}else{
+		this.role.className = "role2";
+	}
+};
 
+Role.prototype.static = function() {
+	this.role.className = "";
+};
 
 
 Role.prototype._setHeight = function(h){
