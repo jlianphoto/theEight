@@ -1,7 +1,7 @@
 function Block(w,h,x){
 
 	this.w = w || this.random(300,100);
-	this.h = h || this.random(180,100);
+	this.h = h || this.random(180,50);
 
 	// this.x =  x || 320; // translateX
 	if (x==0) {

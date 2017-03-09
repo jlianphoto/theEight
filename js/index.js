@@ -34,12 +34,16 @@ Game.prototype.startGetVoiceSize = function() {
           
 
           if (this.voiceSize>0.5) {
-
+            //jump
             if (this.voiceSize > 30) {
               this.role.jump(this.voiceSize-30);
             }
             
+            //move
             this.role.move();
+
+
+            
             this.blocks.forEach(function(item){
               item.move(this.voiceSize/100);
             }.bind(this));
@@ -64,7 +68,7 @@ Game.prototype.startGetVoiceSize = function() {
 
 
           //change role hight
-          if (this.blocks[1] && this.blocks[1].deltaX>252) {
+          if (this.blocks[1] && this.blocks[1].deltaX>252 && this.role.h+this.voiceSize>=this.blocks[1].h) {
             this.role.h = this.blocks[1].h;
           }
 
