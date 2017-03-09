@@ -1,27 +1,37 @@
-function Role(){
+function Role(initHeight){
   this.frame = 0;
-  this.h = 0;
+  this.h = initHeight;
   this.role = document.querySelector('.role');
+  
+  this._setHeight(this.h);
+
+
 }
 
 
 Role.prototype.jump = function(h) {
-  this.role.style.webkitTransform = `translate(0, ${-h}px)`;
+	var h = this.h +h 
+  	this._setHeight(h);
 };
 
 Role.prototype.jumpDown = function() {
 
-	var animateFrame = requestAnimationFrame(this.jumpDown.bind(this));
-
 	this.frame++;
 	if (this.frame%2 == 0) {
-		this.h++;
+		this.h--;
 	}
 
-	if (this.h >=140) {
+	if (this.h <0) {
 		console.log("你死了");
-		window.cancelAnimationFrame(animateFrame);
 	}
-	this.role.style.webkitTransform = `translate(0, ${this.h}px)`;
 
+	this._setHeight(this.h);
+
+};
+
+
+
+
+Role.prototype._setHeight = function(h){
+  	this.role.style.webkitTransform = `translate(0, ${-h}px)`;
 };
