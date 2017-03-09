@@ -21,10 +21,6 @@ Role.prototype.jumpDown = function() {
 		this.h--;
 	}
 
-	if (this.h <0) {
-		console.log("你死了");
-	}
-
 	this._setHeight(this.h);
 
 	if (this.frame%2 == 0) {

@@ -1,10 +1,10 @@
 
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var analyser ;
-
+var timer ; 
 
 function Game(){
-  this.timer = null;
 
   this.blocks = [];
 
@@ -27,16 +27,16 @@ Game.prototype.gameStart = function() {
 };
 
 Game.prototype.startGetVoiceSize = function() {
-  this.timer = setTimeout(() => {
+
           let voiceSize = AudioAPI.getVoiceSize(analyser)
           this.voiceSize = voiceSize/1000;
 
           
 
-          if (this.voiceSize>0) {
+          if (this.voiceSize>0.5) {
 
-            if (this.voiceSize > 1) {
-              this.role.jump(this.voiceSize);
+            if (this.voiceSize > 30) {
+              this.role.jump(this.voiceSize-30);
             }
             
             this.role.move();
@@ -71,16 +71,24 @@ Game.prototype.startGetVoiceSize = function() {
           // create block
           var len = this.blocks.length-1;
           if (this.blocks[len].deltaX>this.blocks[len].w+50) {
-            console.log(1)
             var block = new Block();
             this.blocks.push(block);
           }
 
-          this.startGetVoiceSize()
-        }, 5)
+
+          //game over
+          if (this.role.h <0) {
+            this.gameover();
+          }else{
+            timer = requestAnimationFrame(this.startGetVoiceSize.bind(this));
+          }
+
+
 };
 
-
+Game.prototype.gameover = function() {
+      cancelAnimationFrame(timer);
+};
 
 
 
