@@ -62,7 +62,7 @@ Game.prototype.startGetVoiceSize = function() {
                     
 
           // jumpDown
-          if (this.blocks[0].deltaX > this.blocks[0].w+288 && this.blocks[1].deltaX < 252 && this.voiceSize<0.5) {
+          if (this.die || (this.blocks[0].deltaX > this.blocks[0].w+288 && this.blocks[1].deltaX < 252 && this.voiceSize<0.5)) {
             this.role.jumpDown()
           }
 
