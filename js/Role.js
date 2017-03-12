@@ -44,13 +44,6 @@ Role.prototype.static = function() {
 	this.role.className = "";
 };
 
-
-Role.prototype.die = function() {
-	this.timer = setInterval(()=>{
-		this.jumpDown();
-	},2)
-};
-
 Role.prototype._setHeight = function(h){
   	this.role.style.webkitTransform = `translate(0, ${-h}px)`;
 };
