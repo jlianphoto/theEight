@@ -5,17 +5,30 @@
 
 	$.prototype = {
 		init : function(el){
-			this.el = document.querySelector(el);
+			var els = document.querySelectorAll(el);
+			for (var i = 0; i < els.length; i++) {
+				this[i] = els[i];
+			}
+			this.length = els.length;
 			return this;
 		},
 		show : function(){
-			this.el.style.display = "block";
+			for (var i = 0; i < this.length; i++) {
+				this[i].style.display = "block";
+			}
+			return this;
 		},
 		hide : function(){
-			this.el.style.display = "none";
+			for (var i = 0; i < this.length; i++) {
+				this[i].style.display = "none";
+			}
+			return this;
 		},
 		css : function(k,v){
-			this.el.style[k] = v;
+			for (var i = 0; i < this.length; i++) {
+				this[i].style[k] = v;
+			}
+			return this;
 		}
 	}
 

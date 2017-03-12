@@ -6,12 +6,12 @@
   
   var game = new Game();
 
-   $btnNewGame.el.onclick = function(){
+   $btnNewGame[0].onclick = function(){
       $mask.hide();
       game.gameStart();
    }
 
-   $btnAgain.el.onclick = function(){
+   $btnAgain[0].onclick = function(){
       $mask.hide();
       game.gameStart();
    }
