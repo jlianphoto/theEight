@@ -5,9 +5,13 @@ http://cdn2.163189.xyz/live/gdty/stream.m3u8
 http://cdn2.163189.xyz/live/gdzj/stream.m3u8
 #EXTINF:-1 tvg-name="CCTV4" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV4.png" group-title="📺央视频道",CCTV-4
 http://64.181.228.239:50001/TVOD/5000000005000030093/bestzb/index.m3u8
+#EXTINF:-1 tvg-name="CCTV4" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV4.png" group-title="📺央视频道",CCTV-4
+https://tv.bfsu.edu.cn/hls/cctv4hd.m3u8
 #EXTINF:-1 tvg-name="CCTV13" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV13.png" group-title="📺央视频道",CCTV-13
 http://www.7891136.xyz:50001/TVOD/5000000005000001827/bestzb/index.m3u8
+#EXTINF:-1 tvg-name="CCTV13" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV13.png" group-title="📺央视频道",CCTV-13
+https://tv.bfsu.edu.cn/hls/cctv13hd.m3u8
 #EXTINF:-1 tvg-name="CCTV5" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV5.png" group-title="📺央视频道",CCTV-5
-http://8.209.196.123:32768/1000000001000004794/ystenlive/index.m3u8
+https://tv.bfsu.edu.cn/hls/cctv5ph.m3u8
 #EXTINF:-1 tvg-name="CCTV5+" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV5+.png" group-title="📺央视频道",CCTV-5+
-http://8.209.196.123:32768/1000000001000020505/ystenlive/index.m3u8
+https://tv.bfsu.edu.cn/hls/cctv5phd.m3u8
