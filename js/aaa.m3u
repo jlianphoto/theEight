@@ -12,6 +12,6 @@ http://www.7891136.xyz:50001/TVOD/5000000005000001827/bestzb/index.m3u8
 #EXTINF:-1 tvg-name="CCTV13" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV13.png" group-title="📺央视频道",CCTV-13
 https://tv.bfsu.edu.cn/hls/cctv13hd.m3u8
 #EXTINF:-1 tvg-name="CCTV5" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV5.png" group-title="📺央视频道",CCTV-5
-https://tv.bfsu.edu.cn/hls/cctv5ph.m3u8
+https://tv.bfsu.edu.cn/hls/cctv5hd.m3u8
 #EXTINF:-1 tvg-name="CCTV5+" tvg-logo="http://gh.catmak.name/https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV5+.png" group-title="📺央视频道",CCTV-5+
 https://tv.bfsu.edu.cn/hls/cctv5phd.m3u8
